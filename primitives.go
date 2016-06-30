@@ -1,6 +1,6 @@
 package world3D
 
-func Cube(blk Block, dx, dy, dz uint) RegionType {
+func Cube(blk Block, dx, dy, dz uint) Blueprint {
     var space [dx][dy][dz]Block
     for x := range dx {
         for y := range dy {
@@ -9,5 +9,5 @@ func Cube(blk Block, dx, dy, dz uint) RegionType {
             }
         }
     }
-    NewBlueprint(space[:][:][:])
+    return NewBlueprint(space[:][:][:])
 }
